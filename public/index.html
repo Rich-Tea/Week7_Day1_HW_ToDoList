@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/bundle.js"></script>
+</head>
+<body>
+    <div id="app">
+    <h1>{{ title }}</h1>
+    <ul>
+        <li v-for="task in tasks" :class="task.priority">
+        <span>Task: {{ task.name }} <br> Priority: {{ task.priority }}</span>
+        
+    </li>
+    </ul>
+    <form v-on:submit.prevent="saveNewTask">
+      <label for="new-task">Add a new task:</label>
+      <input id="new-task" type="text" v-model="newTask.name" />
+      <label for="priority">Priority:</label>
+      <input id="low" name="priorityButton" type="radio" value="low" v-model="newTask.priority">Low</input>
+      <input id="medium" name="priorityButton" type="radio" value="medium" v-model="newTask.priority">Medium</input>
+      <input id="high" name="priorityButton" type="radio" value="high" v-model="newTask.priority">High</input>
+      <input type="submit" value="Add">
+    </form>
+
+    </div>
+</body>
+</html>

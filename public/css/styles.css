@@ -1,0 +1,22 @@
+body {
+    background-color: skyblue;
+}
+
+#app {
+	width: 70%;
+	margin: 0 auto;
+	font-family: 'Lato', sans-serif;
+}
+
+
+
+h1 {
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+li {
+    font-weight: bold;
+    padding: 10px;
+}
